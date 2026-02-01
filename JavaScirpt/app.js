@@ -316,7 +316,33 @@ console.log("Hello, World!");
         console.log(result); // "Error: Division resulted in NaN"
 
 
+               //////////////////////////////////////////////////////////////////////////////////////
+                                  How Do the parseFloat() and parseInt() Methods Work?
+               /////////////////////////////////////////////////////////////////////////////////////
 
-        
+            console.log(parseFloat("3.14"));     // 3.14
+            console.log(parseFloat("3.14"));     // 3.14
+            console.log(parseFloat("3.14 abc")); // 3.14
+            console.log(parseFloat("3.14.5"));   // 3.14
+            console.log(parseFloat("abc 3.14")); // NaN  
+
+
+            console.log(parseInt("42"));       // 42
+            console.log(parseInt("42px"));     // 42
+            console.log(parseInt("3.14"));     // 3
+            console.log(parseInt("abc123"));   // NaN
+
+        Both methods have some noteworthy behaviors. They ignore leading whitespace:
+
+            console.log(parseFloat("  3.14"));  // 3.14
+            console.log(parseInt("  42"));      // 42
+
+        They also handle optional plus (+) and minus (-) signs:
+
+            console.log(parseFloat("+3.14"));  // 3.14
+            console.log(parseInt("-42"));      // -42
+
+
+
                */
   

@@ -394,14 +394,81 @@ console.log("Hello, World!");
             console.log(undefined < 0);  // false
             console.log(undefined == 0); // false
 
-            
+
+               //////////////////////////////////////////////////////////////////////////////////////
+                      What Are Switch Statements and How Do They Differ from If/Else Chains?
+               /////////////////////////////////////////////////////////////////////////////////////
+
+               It's worth noting that switch statements in JavaScript use strict comparison (===), which means they don't perform 
+               type coercion. This can be an advantage in terms of predictability and avoiding subtle bugs.
+               
+                switch (expression) {
+                    case value1:
+                        // code to be executed if expression === value1
+                        break;
+                    case value2:
+                        // code to be executed if expression === value2
+                        break;
+                    default:
+                        // code to be executed if expression doesn't match any case
+                }
 
 
-            
-        
+
+                let dayOfWeek = 3; 
+
+                switch (dayOfWeek) {
+                    case 1:
+                        console.log("It's Monday! Time to start the week strong.");
+                        break;
+                    case 2:
+                        console.log("It's Tuesday! Keep the momentum going.");
+                        break;
+                    case 3:
+                        console.log("It's Wednesday! We're halfway there.");
+                        break;
+                    case 4:
+                        console.log("It's Thursday! Almost the weekend.");
+                        break;
+                    case 5:
+                        console.log("It's Friday! The weekend is near.");
+                        break;
+                    case 6:
+                        console.log("It's Saturday! Enjoy your weekend.");
+                        break;
+                    case 7:
+                        console.log("It's Sunday! Rest and recharge.");
+                        break;
+                    default:
+                        console.log("Invalid day! Please enter a number between 1 and 7.");
+                }
+
+              switch statements can be more readable and concise when dealing with many possible values for a single variable.
+
+              if/else if statements on the other hand are more flexible. They can evaluate complex conditions and different 
+              variables in each clause. This makes them suitable for a wider range of scenarios.   
 
 
 
+                let creditScore = 720; 
+                let annualIncome = 60000; 
+                let loanAmount = 200000; 
+
+                let eligibilityStatus;
+
+                if (creditScore >= 750 && annualIncome >= 80000) {
+                    eligibilityStatus = "Eligible for premium loan rates.";
+                } else if (creditScore >= 700 && annualIncome >= 50000) {
+                    eligibilityStatus = "Eligible for standard loan rates.";
+                } else if (creditScore >= 650 && annualIncome >= 40000) {
+                    eligibilityStatus = "Eligible for subprime loan rates.";
+                } else if (creditScore < 650) {
+                    eligibilityStatus = "Not eligible due to low credit score.";
+                } else {
+                    eligibilityStatus = "Not eligible due to insufficient income.";
+                }
+
+                console.log(eligibilityStatus);
 
 
 

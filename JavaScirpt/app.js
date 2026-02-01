@@ -352,7 +352,7 @@ console.log("Hello, World!");
 
             let num = 3.14159;
             console.log(num.toFixed(2)); // "3.14" 
-            
+
 
 
             console.log((3.14159).toFixed(3));  // "3.142"
@@ -373,7 +373,32 @@ console.log("Hello, World!");
             console.log("Total: $" + total.toFixed(2)); // "Total: $21.59"
 
 
+               //////////////////////////////////////////////////////////////////////////////////////
+                              How Do Comparisons Work with Null and Undefined Data Types?
+               /////////////////////////////////////////////////////////////////////////////////////
 
+            console.log(null == undefined); // true
+
+            console.log(null === undefined); // false
+
+            console.log(null == 0);  // false
+            console.log(null == ''); // false
+            console.log(undefined == 0); // false
+            console.log(undefined == ''); // false
+
+            console.log(null > 0);  // false
+            console.log(null == 0); // false
+            console.log(null >= 0); // true                     0>=0       null is converted to 0
+
+            console.log(undefined > 0);  // false
+            console.log(undefined < 0);  // false
+            console.log(undefined == 0); // false
+
+            
+
+
+            
+        
 
 
 

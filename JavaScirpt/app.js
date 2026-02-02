@@ -1,5 +1,42 @@
 console.log("Hello, World!");
-/*
+/*              
+                //////////////////////////////////////////////////////////////////////////////////////
+                                     What Are Unary Operators, and How Do They Work?
+               /////////////////////////////////////////////////////////////////////////////////////
+        const str = '42';
+        const strToNum = +str;
+
+        console.log(strToNum); // 42
+        console.log(typeof str); // string
+        console.log(typeof strToNum); // number    
+
+        const str = '42';
+        const strToNegativeNum = -str;
+
+        console.log(strToNegativeNum); // -42
+        console.log(typeof str); // string
+        console.log(typeof strToNegativeNum); // number
+
+        let isOnline = true;
+        console.log(!isOnline); // false
+
+        let isOffline = false;
+        console.log(!isOffline); // true
+
+        const num = 5; // The binary for 5 is 00000101
+
+        console.log(~num); // -6
+
+        const result = void (2 + 2);
+
+        console.log(result); // undefined
+
+
+        const value = 'Hello world';
+
+        console.log(typeof value); // string
+                
+                
                //////////////////////////////////////////////////////////////////////////////////////
                                      What Are Bitwise Operators, and How Do They Work ?
                /////////////////////////////////////////////////////////////////////////////////////

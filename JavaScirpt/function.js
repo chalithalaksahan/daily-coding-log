@@ -66,5 +66,35 @@ function greetings(name = "Guest") {
 greetings(); // Hello, Guest!
 greetings("Anna"); // Hello, Anna!
 
+               //////////////////////////////////////////////////////////////////////////////////////
+                                 What Are Arrow Functions, and How Do They Work?
+               /////////////////////////////////////////////////////////////////////////////////////
 
+Here is how you can refactor the previous example to use arrow function syntax instead:
+
+            const greetings = (name) => {
+            console.log("Hello, " + name + "!");
+            };
+
+If your parameter list only has one parameter in it, then you can remove the parentheses like this:
+
+            const greetings = name => {
+            console.log("Hello, " + name + "!");
+            };
+
+If your arrow function has no parameters, then you must use the parentheses like this:
+
+            const greetings = () => {
+            console.log("Hello");
+            };
+
+if your function body only contains a single line of code, you can remove the curly braces like this:
+
+            const greetings = name => console.log("Hello, " + name + "!");            
+If you tried to remove the curly braces and place the calculation on the same line, then you would get an Uncaught SyntaxError: Unexpected token 'return' message:
+
+const calculateArea = (width, height) => return width * height;
+The reason why you are getting this error, is because you need to remove the return statement. When you remove that return statement, the error will disappear and the function will still implicitly return the calculation.
+
+const calculateArea = (width, height) => width * height;
 */

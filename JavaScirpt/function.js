@@ -97,4 +97,33 @@ const calculateArea = (width, height) => return width * height;
 The reason why you are getting this error, is because you need to remove the return statement. When you remove that return statement, the error will disappear and the function will still implicitly return the calculation.
 
 const calculateArea = (width, height) => width * height;
+
+               //////////////////////////////////////////////////////////////////////////////////////
+                                 How Does Global, Local, and Block Scope Work?
+               /////////////////////////////////////////////////////////////////////////////////////
+
+let globalVar = "I'm a global variable";
+
+function printGlobalVar() {
+    console.log(globalVar);
+}
+
+printGlobalVar(); // "I'm a global variable"
+
+-----------------------------------------
+function greet() {
+    let message = "Hello, local scope!";
+    console.log(message);
+}
+
+greet(); // "Hello, local scope!"
+// console.log(message); // This will throw an error
+
+-----------------------------------------
+
+if (true) {
+    let blockVar = "I'm in a block";
+    console.log(blockVar); // "I'm in a block"
+}
+console.log(blockVar); // This will throw an error
 */

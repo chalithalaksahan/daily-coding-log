@@ -1,0 +1,26 @@
+# Clothing Store POS System (JavaFX Standalone)
+
+## 📌 Project Overview
+This project is a standalone Point of Sale (POS) system designed for a retail clothing store. 
+It is developed as part of the **iCET (Institute of Computer Engineering Technology)** coursework. 
+The application is built using **Java** and **JavaFX** for the frontend, with **MySQL** as the database backend.
+
+## 🚀 Current Progress: Phase 1 - Database Design
+The initial phase focuses on designing a robust Relational Database Schema to handle complex retail operations.
+
+### 🗂 Database Schema Highlights (ER Diagram)
+The system is architected to handle specific clothing retail needs, including:
+
+* **Product Variants:** Implemented a `Variant` entity to separate base products (e.g., "T-Shirt") from specific stock keeping units (Size/Color combinations).
+* **Inventory Management:** Includes `re_order_lvl` (Re-order Level) alerts and multi-location tracking.
+* **User & Employee Separation:** Distinct entities for `Users` (System Access) and `Employees` (HR/Payroll data) to enhance security.
+* **Supplier Relations:** Tracks lead times and supplier-specific product catalogs.
+
+## 🛠 Tech Stack
+* **Language:** Java (JDK 17)
+* **UI Framework:** JavaFX
+* **Database:** MySQL
+* **Architecture:** Layered Architecture 
+
+---
+*Created by Chalitha Laksahan*

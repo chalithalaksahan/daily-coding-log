@@ -24,3 +24,6 @@ The system is architected to handle specific clothing retail needs, including:
 
 ---
 *Created by Chalitha Laksahan*
+
+Modified Er Diagram and corrected ER diagram with proper cardinalities
+

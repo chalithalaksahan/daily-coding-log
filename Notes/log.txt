@@ -60,3 +60,28 @@ RUN javac HelloWorld.java
 # Set the default command to run the compiled Java program
 CMD ["java", "HelloWorld"]
 
+///////////////////////////
+    Learn NotebookLM 
+//////////////////////////
+
+# 📘 My Learning Log: NotebookLM Edition
+> **Goal:** Master AI-driven learning workflows.
+
+## 🗓️ Feb 7, 2026: Google NotebookLM
+Today I explored how to turn static documents into an interactive "second brain."
+
+### 🚀 Key Concepts Learned
+- **Source Grounding:** NotebookLM doesn't hallucinate like standard AI because it only uses the files I upload (PDFs, YouTube links, Docs).
+- **Audio Overviews:** Learned how to generate podcast-style summaries for passive listening.
+- **Citations:** Every answer the AI gives includes a direct link back to the specific page/paragraph of my source.
+
+### 🛠️ Practical Tasks Completed
+- [x] Created a "Learning Fast" Notebook.
+- [x] Uploaded 3 PDF research papers.
+- [x] Generated an interactive study guide and a 5-question quiz.
+- [x] Tested the **Interactive Audio** feature to steer the AI discussion toward "practical applications."
+
+### 💡 Key Insight
+NotebookLM is best used for **Active Learning**. Instead of reading, I should ask it to *quiz me* or *challenge my assumptions* based on the text.
+
+

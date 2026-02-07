@@ -27,11 +27,36 @@ The system is architected to handle specific clothing retail needs, including:
 
 Modified Er Diagram and corrected ER diagram with proper cardinalities
 
+2026/02/07
 
-Filtering Efficiency:
+SQL Filtering Efficiency:
     ◦ Avoid Functions in Filters: Do not apply functions to columns in a WHERE clause (e.g., WHERE YEAR(date) = 2023). This prevents the database from using an index. Instead, use a range (e.g., WHERE date BETWEEN '2023-01-01' AND '2023-12-31').
     ◦ Wildcards: Avoid leading wildcards in text searches (e.g., LIKE '%value') as they prevent index usage. Trailing wildcards (LIKE 'value%') are acceptable.
     ◦ Operators: Use IN instead of multiple OR conditions, as OR can kill performance.
     • Set Operators: Use UNION ALL instead of UNION whenever possible. UNION performs an expensive check for duplicates, whereas UNION ALL simply stacks results, which is much faster.
     • Data Removal: Use TRUNCATE instead of DELETE when clearing a table. TRUNCATE is faster because it skips the extensive logging and row-by-row deletion protocols required by DELETE.
+
+///////////////////////////
+     Docker  Basics
+//////////////////////////
+Core Concepts:
+Docker Image: A read-only blueprint or template with instructions for creating a container. It contains the application code, runtime, libraries, and settings needed to run the application.
+Docker Container: A runnable instance of an image. It is a lightweight, isolated environment where the application actually runs. Multiple containers can run on the same machine without interfering with each other.
+Dockerfile: A simple text file that contains all the commands needed to build a Docker image automatically.
+Docker Hub/Registry: A central repository for storing and sharing Docker images. We can use pre-built official images (e.g., for databases or web servers) or push our own custom images. 
+
+# Use a specific OpenJDK version as the base image
+FROM openjdk:17
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy the Java source file into the container
+COPY HelloWorld.java .
+
+# Compile the Java program
+RUN javac HelloWorld.java
+
+# Set the default command to run the compiled Java program
+CMD ["java", "HelloWorld"]
 

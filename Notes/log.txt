@@ -27,3 +27,11 @@ The system is architected to handle specific clothing retail needs, including:
 
 Modified Er Diagram and corrected ER diagram with proper cardinalities
 
+
+Filtering Efficiency:
+    ◦ Avoid Functions in Filters: Do not apply functions to columns in a WHERE clause (e.g., WHERE YEAR(date) = 2023). This prevents the database from using an index. Instead, use a range (e.g., WHERE date BETWEEN '2023-01-01' AND '2023-12-31').
+    ◦ Wildcards: Avoid leading wildcards in text searches (e.g., LIKE '%value') as they prevent index usage. Trailing wildcards (LIKE 'value%') are acceptable.
+    ◦ Operators: Use IN instead of multiple OR conditions, as OR can kill performance.
+    • Set Operators: Use UNION ALL instead of UNION whenever possible. UNION performs an expensive check for duplicates, whereas UNION ALL simply stacks results, which is much faster.
+    • Data Removal: Use TRUNCATE instead of DELETE when clearing a table. TRUNCATE is faster because it skips the extensive logging and row-by-row deletion protocols required by DELETE.
+

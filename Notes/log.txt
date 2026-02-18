@@ -27,7 +27,9 @@ The system is architected to handle specific clothing retail needs, including:
 
 Modified Er Diagram and corrected ER diagram with proper cardinalities
 
-2026/02/07
+                                                                ---------------------------------------
+                                                                            2026/02/07
+                                                                ---------------------------------------
 
 SQL Filtering Efficiency:
     ◦ Avoid Functions in Filters: Do not apply functions to columns in a WHERE clause (e.g., WHERE YEAR(date) = 2023). This prevents the database from using an index. Instead, use a range (e.g., WHERE date BETWEEN '2023-01-01' AND '2023-12-31').
@@ -85,3 +87,8 @@ Today I explored how to turn static documents into an interactive "second brain.
 NotebookLM is best used for **Active Learning**. Instead of reading, I should ask it to *quiz me* or *challenge my assumptions* based on the text.
 
 
+/////////////////////////////////////
+ clothify pos system UI design 
+////////////////////////////////////
+
+create login page and admin view
